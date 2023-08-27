@@ -1,7 +1,6 @@
 package com.example.myapplicationjavagroovy;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class MainActivity3 extends AppCompatActivity {

@@ -1,5 +1,6 @@
 package com.example.myapplicationjavagroovy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import com.example.myapplicationjavagroovy.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,9 +25,18 @@ private ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        TextView tv = findViewById(R.id.tv);
-        tv.setText("你好，世界！");
+        setContentView(R.layout.qq_1);
+
+        Button button = findViewById(R.id.button3);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+
 
 //
 //     binding = ActivityMainBinding.inflate(getLayoutInflater());
